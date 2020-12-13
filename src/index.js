@@ -27,7 +27,7 @@ app.get("/findColleges", (req, res) => {
       minPackage: { $gte: 10.5 },
       maxFees: { $lte: 10 }
     })
-    .then((collegeMod) => res.send(collegeMod));
+    .then((collegeMod) => res.status(200).send(collegeMod));
 });
 
 app.listen(port, () => console.log(`App listening on port ${port}!`));
